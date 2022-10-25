@@ -1,0 +1,148 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500&family=Rubik:wght@300;400&display=swap');
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navigasi Bar */
+nav {
+    display: flex;
+    background-color: #161B21;
+    justify-content: space-around;
+    /* padding: 14px 16px; */
+    height: 50px;
+    align-items: center;
+    color: white;
+}
+
+nav .logo  {
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: white;
+    transition: all .5s ease 0s;
+    text-shadow: 0px 0px 10px #ffff;
+}
+
+
+/* Humberger Menu */
+.menu-toogle {
+    display: none;
+    flex-direction: column;
+    height: 20px;    
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toogle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toogle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Humberger Menu Animation */
+.menu-toogle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toogle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px,-1px);
+    background-color: white;
+}
+
+.menu-toogle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toogle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+    background-color: white; 
+}
+
+
+
+
+/* Responsive Breakpoin */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    nav ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #161B21;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.5s;
+    }
+
+    nav ul .slide {
+        transform: translate(0);
+    }
+
+    .menu-toogle {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+    }
+
+}
