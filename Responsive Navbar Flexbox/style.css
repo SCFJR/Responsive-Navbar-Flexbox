@@ -128,7 +128,6 @@ nav ul li a:hover {
     z-index: -1;
     transform: translateX(100%);
     transition: all 0.5s;
-    border-bottom: 3px solid rgb(124, 124, 124);
   }
 
   nav ul li a:hover {
@@ -148,3 +147,4 @@ nav ul li a:hover {
     justify-content: space-between;
   }
 }
+
