@@ -11,7 +11,7 @@
 /* Style */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 /* Navigasi Bar */
@@ -115,7 +115,7 @@ nav ul li a:hover {
 /* Ukuran Mobile */
 @media screen and (max-width: 576px) {
   nav ul {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     font-size: 19px;
